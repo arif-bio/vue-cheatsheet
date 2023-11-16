@@ -1,21 +1,25 @@
-# Template Syntax ​ by vuejs.org
-URL: https://vuejs.org/guide/essentials/template-syntax.html
+# Template Syntax ​
 
-v-bind:id="dynamicId"
+## Metadata
+- Author: vuejs.org
+- Category: article
+- URL: https://vuejs.org/guide/essentials/template-syntax.html
+## Highlights
 
+<span>Message: {{ msg }}</span>
 
-:id="dynamicId"
+<span v-html="rawHtml"></span>
 
+<div v-bind:id="dynamicId"></div>
 
-:disabled="isButtonDisabled"
+<div :id="dynamicId"></div>
 
-
+<button :disabled="isButtonDisabled">Button</button>
+Note: //disabled="true"
 objectOfAttrs = { id: 'container', class: 'wrapper' }
 
+<div v-bind="objectOfAttrs"></div>
 
-v-bind="objectOfAttrs"
+<div :id="`list-${id}`"></div>
 
-
-:id="`list-${id}`"
-
-
+<time :title="toTitleDate(date)" :datetime="date">
